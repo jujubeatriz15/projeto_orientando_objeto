@@ -1,3 +1,4 @@
+#Classe Pessoa
 class Pessoa():
     def __init__(self, nome, idade, peso):
         self.nome = nome
@@ -40,6 +41,7 @@ class Pessoa():
             print(f"E {self.nome} começou a tagarelar")
             self.falar == True
 
+#Classe Conta
 class Conta():
     def __init__(self, numero, deposito, nome, tipo):
         self.nome = nome
@@ -102,6 +104,7 @@ class Conta():
         else:
             print("Conta nao pode ser desativada")
 
+#Classe Animal
 class Animal():
     def __init__(self, nome, cor):
         self.nome = nome
@@ -129,16 +132,32 @@ class Coelho(Animal):
     def Guinchar(self):
         print(f"{self.nome} guinchou fofamente")
 
+#Classe Ingresso
 class Ingresso():
     def __init__(self,valor):
         self.valor = valor
 
     def imprimeValor(self):
         print(f"O valor do ingresso é {self.valor}")
-
 class Vip(Ingresso):
     def __init__(self, valor):
         super().__init__(valor)
         self.valor *= 1.5
     def imprimiValor(self, valor):
         print(f"O valor do ingresso Vip é {self.valor}")
+
+#Classe forma
+class Forma():
+    def __init__(self):
+        self.area = 0
+        self.perimetro = 0
+
+class Retangulo(Forma):
+    def __init__(self):
+        super(). __init__(self)
+    def calculaArea(self, base, altura):
+        self.area = base * altura
+        print(f"A area do retangulo é: {self.area}")
+    def calculaPerimetro(self, base, altura):
+        self.perimetro = 2*(base + altura)
+        print(f"O perimetro do retangulo é: {self.perimetro}")
