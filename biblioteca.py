@@ -113,3 +113,32 @@ class Gato(Animal):
         super().__init__(nome, cor)
     def miar(self):
         print(f"{self.nome} miou pra burro que nao me deixou dormir")
+class Cachorro(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+    def latir(self):
+        print(f"{self.nome} latiu pra burro porque queria brincar")
+class Vaca(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+    def mugir(self):
+        print(f"{self.nome} mugiu pra burro")
+class Coelho(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+    def Guinchar(self):
+        print(f"{self.nome} guinchou fofamente")
+
+class Ingresso():
+    def __init__(self,valor):
+        self.valor = valor
+
+    def imprimeValor(self):
+        print(f"O valor do ingresso é {self.valor}")
+
+class Vip(Ingresso):
+    def __init__(self, valor):
+        super().__init__(valor)
+        self.valor *= 1.5
+    def imprimiValor(self, valor):
+        print(f"O valor do ingresso Vip é {self.valor}")
