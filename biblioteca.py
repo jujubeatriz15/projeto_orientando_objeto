@@ -161,3 +161,23 @@ class Retangulo(Forma):
     def calculaPerimetro(self, base, altura):
         self.perimetro = 2*(base + altura)
         print(f"O perimetro do retangulo é: {self.perimetro}")
+
+#Class Atleta
+class Atleta():
+    def __init__(self, aposentado, peso):
+        self.aposentado = False
+        self.peso = False
+    def aposentar(self):
+        print(f"O atleta de aposentou")
+    def aquecer(self):
+        print(f"O atleta se aqueceu")
+class Corredor(Atleta):
+    def Correr(self):
+        print(f"O Atleta está corredor como o Usain Bolt")
+class Nadador(Atleta):
+    def Nadar(self):
+        print(f"O Atleta está nadando como um peixe")
+class Ciclista(Atleta):
+    def Pedalar(self):
+        print(f"O Atleta está andando na sua bike maneira")
+
