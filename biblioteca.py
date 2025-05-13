@@ -103,6 +103,7 @@ class Conta():
                 print("-" * 50)
         else:
             print("Conta nao pode ser desativada")
+<<<<<<< HEAD
 
 #Classe Animal
 class Animal():
@@ -180,4 +181,6 @@ class Nadador(Atleta):
 class Ciclista(Atleta):
     def Pedalar(self):
         print(f"O Atleta está andando na sua bike maneira")
+=======
+>>>>>>> c9209785a5a450ff2152238f92a589dfecebf990
 
