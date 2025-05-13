@@ -45,22 +45,71 @@ class Conta():
         self.nome = nome
         self.numero = numero
         self.tipo = tipo
+        self.deposito = deposito
         self.saldo = 0
-        self.status_conta = False
-        self.deposito = False
+        self.limite = 0
+        self.status = False
 
 
-    def ativarConta(self):
-        if self.status_conta == True:
+
+    def ativaConta(self):
+        if self.status == True:
             print("sua conta ja esta ativa")
-        elif self.status_conta == False:
-                self.status_conta = True
-
-    def status_contaa(self):
-        if self.status_conta == True:
-            print("conta ativada")
+            print("-" * 50)
+    def ativarConta(self):
+        if self.status == True:
+            print("A sua conta ja está ativada")
+            print("-" * 50)
         else:
-            print("conta desarivada")
+            self.status = True
+            print("Conta ja ativa")
+            print("-" * 50)
 
-    def depositar(self):
-        if self.deposito
+    def depositar(self,valordeposito):
+        if self.status == True:
+            self.saldo += valordeposito
+            print("Valor depositado com sucesso")
+            print("-" * 50)
+        else:
+            print("Conta nao ativa")
+            print("-" * 50)
+
+    def VerificacaoSaldo(self):
+        if self.saldo == True:
+            print(self.saldo)
+            print(f"Saldo: {self.saldo}")
+            print("-"*50)
+        else:
+            print("Conta nao ativa")
+            print("-"*50)
+
+    def sacar(self,valorsaque):
+        if self.status == True:
+            self.saldo -= valorsaque
+            print("O saque foi efetuado")
+            print("-" * 50)
+        else:
+            print("Conta nao ativa")
+            print("-" * 50)
+
+    def desativarConta(self):
+        if self.saldo == 0:
+            if self.saldo == 0:
+                self.status == True
+                self.status == False
+                print("Conta nao ativa")
+                print("-" * 50)
+        else:
+            print("Conta nao pode ser desativada")
+
+class Animal():
+    def __init__(self, nome, cor):
+        self.nome = nome
+        self.cor = cor
+    def comer(self):
+        print(f"{self.nome} foi comer")
+class Gato(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+    def miar(self):
+        print(f"{self.nome} miou pra burro que nao me deixou dormir")
